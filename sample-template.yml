@@ -15,14 +15,13 @@ jobs:
   build-and-deploy-to-dev:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
-            
+                
    # Authentication
     - uses: azure/login@v1
       with:
         creds: ${{ secrets.AZURE_CREDENTIALS  }}
     
-    #Checkout
+    # Checkout
     - name: Checkout
       uses: actions/checkout@v1
         
