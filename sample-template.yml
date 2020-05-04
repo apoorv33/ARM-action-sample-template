@@ -21,6 +21,10 @@ jobs:
     - uses: azure/login@v1
       with:
         creds: ${{ secrets.AZURE_CREDENTIALS  }}
+    
+    #Checkout
+    - name: Checkout
+      uses: actions/checkout@v1
         
     # Deployment of template
     - name: Azure CLI script to deploy an ARM Template
